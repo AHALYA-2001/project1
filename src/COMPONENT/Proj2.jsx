@@ -1,14 +1,14 @@
 import React from "react"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import '../Component/Proj2.css'
 
-
-function Project2(props) {
+function Proj2(props) {
   const data=props.data
   console.log(data);
   return (
     <>
-    <div >
+    <div className="c">
     {
     data.map((p1)=>(
         <>
@@ -16,20 +16,20 @@ function Project2(props) {
               <Card.Img variant="top" src={p1.img}/>
               <Card.Body>
                   <Card.Title>{p1.name}</Card.Title>
-                  <Card.Text>{p1.description}</Card.Text>
+                  <Card.Text>{p1.description} </Card.Text>
                      <Button variant="primary">click here</Button>
               </Card.Body>
             </Card>
-            
-                     
+
             </>
     ))
-   }
+  }
 
     </div>
-   
- 
-   </>
+
+
+        </>
   )
 }
-export default Project2
+
+export default Proj2
